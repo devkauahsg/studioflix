@@ -1,0 +1,1 @@
+Projeto desenvolvido no curso de Análise e Desenvolvimento de Sistemas, na UMC, com o intuito de utilizar Banco de Dados, PHP (back-end), HTML, CSS e Javascript (front-end)
