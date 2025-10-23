@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+
+main{
+    background-image: url('../assets/fundo-site.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    background-color: #A91B1B;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 40px;
+}
+
+
+header h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 42px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header a{
+    color: white;
+}
+
+header i{
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.central{
+    position: absolute;
+    left: 50%;
+    top: 56%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #A91B1B;
+    border-radius: 10px;
+    padding: 1.5rem;
+    background-color: #da14142d;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+}
+
+.central h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 42px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+form label{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 24px;
+    text-align: left;
+}
+
+form input{
+    border: 2px solid #A91B1B;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 6px;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: #e6e6e6;
+    width: 450px;
+}
+
+form .inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+form .btn-login a{
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+form .btn-login{
+    border: 2px solid #A91B1B;
+    border-radius: 5px;
+    padding: 4px 30px;
+    cursor: pointer;
+    transition: all 0.8s ease;
+    color: white;
+    margin-top: 6px;
+}
+
+.btn-login:hover{
+    background-color: #A91B1B;
+}
+
+form h2{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 24px;
+    margin-top: 8px;
+}
+
+form h2 a{
+    color: #D51A1A;
+    text-decoration: underline;
+}
+
+footer{
+    background-color: #620606;
+    color: white;
+}
+
+.container-footer{
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 8rem;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.footer-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-info h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 42px;
+    font-weight: 400;
+    font-style: normal;
+    color: white; 
+}
+
+.footer-info p{
+    font-family: "Montserrat", sans-serif;
+    color: #e6e6e6;
+}
+
+
+.footer-bottom{
+    font-family: "Montserrat", sans-serif;
+    color: #e6e6e6;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

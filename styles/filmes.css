@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    background-color: #A91B1B;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 40px;
+}
+
+header h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 42px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header i{
+    font-size: 28px;
+    cursor: pointer;
+}
+
+main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+main h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 42px;
+}
+
+.filmes-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.filme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 250px;
+}
+
+.filme h2{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 4px;
+}
+
+.filme img{
+    max-width: 250px;
+    border-radius: 4px;
+}
+
+.filme button{
+    background-color:#D51A1A;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    padding: 6px;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    transition: all 0.8s ease;
+}
+
+.filme button:hover{
+    background-color: #A91B1B;
+}
+
+footer{
+    background-color: #620606;
+    color: white;
+}
+
+.container-footer{
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 8rem;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.footer-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-info h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 42px;
+    font-weight: 400;
+    font-style: normal;
+    color: white; 
+}
+
+.footer-info p{
+    font-family: "Montserrat", sans-serif;
+    color: #e6e6e6;
+}
+
+footer .comece-agora{
+    border: 3px solid #D51A1A;
+    border-radius: 4px;
+    margin-top: 12px;
+    width: 40%;
+    padding: 10px 12px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.8s ease;
+}   
+
+footer .comece-agora:hover{
+    background-color: #D51A1A;
+}
+
+.footer-bottom{
+    font-family: "Montserrat", sans-serif;
+    color: #e6e6e6;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
