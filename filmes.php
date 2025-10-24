@@ -16,12 +16,12 @@
     <title>Filmes - Studioflix</title>
 </head>
 <body>
-    <main>
-        <header>
-            <h1>STUDIOFLIX</h1>
-            <i class="fa-solid fa-bars"></i>
-        </header>
+    <header>
+        <h1>STUDIOFLIX</h1>
+        <i class="fa-solid fa-bars"></i>
+    </header>
 
+    <main>
         <h1>Filmes do Studioflix</h1>
         
         <div class="filmes-row">
@@ -85,9 +85,7 @@
                 <h2>Vingadores Ultimato (2019)</h2>
                 <button>ADICIONAR NA LISTA</button>
             </div>
-
         </div>
-    
     </main>
 
     <footer>
