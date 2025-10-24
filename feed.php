@@ -16,78 +16,81 @@
     <title>Feed - Studioflix</title>
 </head>
 <body>
-<main>
-    <header>
+<header>
         <h1>STUDIOFLIX</h1>
         <i class="fa-solid fa-bars"></i>
     </header>
 
-    <div class="postagens">
-        <div class="postagem">
-            <div class="usuario">
-                <img src="assets/homem-perfil.jpg" alt="foto-perfil">
-                <h1>Kaua_hsg</h1>
+    <main>
+        <div class="postagens">
+            <div class="postagem">
+                <div class="usuario">
+                    <img src="assets/homem-perfil.jpg" alt="foto-perfil">
+                    <h1>Kaua_hsg</h1>
+                </div>
+
+                <div class="img-filme">
+                    <img src="assets/vingadores-ultimato.png" alt="Vingadores Ultimato 2019">
+                </div>
+
+                <div class="interacoes">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                    
+                <div class="descricao">
+                    <p><strong>kaua_hsg:</strong> Vingadores Ultimato (2019)</p>
+                    <p class="comentario">Filme excelente, um dos melhores filmes que já assisti, terminou a saga de maneira digna.</p>
+                </div>
             </div>
 
-            <div class="img-filme">
-                <img src="assets/vingadores-ultimato.png" alt="Vingadores Ultimato 2019">
+            <div class="postagem">
+                <div class="usuario">
+                    <img src="assets/homem-perfil.jpg" alt="foto-perfil">
+                    <h1>Kaua_hsg</h1>
+                </div>
+
+                <div class="img-filme">
+                    <img src="assets/vingadores-ultimato.png" alt="Vingadores Ultimato 2019">
+                </div>
+
+                <div class="interacoes">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                    
+                <div class="descricao">
+                    <p><strong>kaua_hsg:</strong> Vingadores Ultimato (2019)</p>
+                    <p class="comentario">Filme excelente, um dos melhores filmes que já assisti, terminou a saga de maneira digna.</p>
+                </div>
             </div>
 
-            <div class="interacoes">
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-regular fa-star"></i>
-            </div>
-                
-            <div class="descricao">
-                <p><strong>kaua_hsg:</strong> Vingadores Ultimato (2019)</p>
-                <p class="comentario">Filme excelente, um dos melhores filmes que já assisti, terminou a saga de maneira digna.</p>
+            <div class="postagem">
+                <div class="usuario">
+                    <img src="assets/homem-perfil.jpg" alt="foto-perfil">
+                    <h1>Kaua_hsg</h1>
+                </div>
+
+                <div class="img-filme">
+                    <img src="assets/vingadores-ultimato.png" alt="Vingadores Ultimato 2019">
+                </div>
+
+                <div class="interacoes">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                    
+                <div class="descricao">
+                    <p><strong>kaua_hsg:</strong> Vingadores Ultimato (2019)</p>
+                    <p class="comentario">Filme excelente, um dos melhores filmes que já assisti, terminou a saga de maneira digna.</p>
+                </div>
             </div>
         </div>
-
-        <div class="postagem">
-            <div class="usuario">
-                <img src="assets/homem-perfil.jpg" alt="foto-perfil">
-                <h1>Kaua_hsg</h1>
-            </div>
-
-            <div class="img-filme">
-                <img src="assets/vingadores-ultimato.png" alt="Vingadores Ultimato 2019">
-            </div>
-
-            <div class="interacoes">
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-regular fa-star"></i>
-            </div>
-                
-            <div class="descricao">
-                <p><strong>kaua_hsg:</strong> Vingadores Ultimato (2019)</p>
-                <p class="comentario">Filme excelente, um dos melhores filmes que já assisti, terminou a saga de maneira digna.</p>
-            </div>
-        </div>
-
-        <div class="postagem">
-            <div class="usuario">
-                <img src="assets/homem-perfil.jpg" alt="foto-perfil">
-                <h1>Kaua_hsg</h1>
-            </div>
-
-            <div class="img-filme">
-                <img src="assets/vingadores-ultimato.png" alt="Vingadores Ultimato 2019">
-            </div>
-
-            <div class="interacoes">
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-regular fa-star"></i>
-            </div>
-                
-            <div class="descricao">
-                <p><strong>kaua_hsg:</strong> Vingadores Ultimato (2019)</p>
-                <p class="comentario">Filme excelente, um dos melhores filmes que já assisti, terminou a saga de maneira digna.</p>
-            </div>
-        </div>
-    </div>
-    
     </main>
+
+    <div class="new-post">
+        <a href="postagem.php"><i class="fa-solid fa-plus"></i></a>
+    </div>
 
     <footer>
         <div class="container-footer">
