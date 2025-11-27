@@ -1,3 +1,35 @@
+<?php   
+
+include "conexao.php";
+    
+if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+    if (!empty($_POST['nome']) && !empty($_POST['nome_usuario']) && !empty($_POST['email']) && !empty($_POST['senha'])) {
+
+        $nome = $_POST ['nome'];
+        $nome_usuario = $_POST ['nome_usuario'];
+        $email = $_POST ['email'];
+        $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+
+        $stmt = $conn->prepare("INSERT INTO usuarios(nome, nome_usuario, email, senha) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $nome, $nome_usuario, $email, $senha);
+    
+        if ($stmt->execute()) {
+    
+            $msg = "Olá $nome_usuario, seu cadastro foi realizado com sucesso!!";
+            header("Location: login.php?msg=" .urlencode($msg));
+            exit;
+    
+        } else {
+            print_r("<script>alert('Erro ao cadastrar usuário!')</script>");
+        }
+    } else {
+        print_r("<script>alert('Por favor preencha todos os campos!')</script>");
+    }
+
+}   
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,17 +45,27 @@
 
     <link rel="stylesheet" href="styles/login.css">
 
+    <link rel="shortcut icon" href="assets/studioflix.ico" type="image/x-icon">
+
     <title>Cadastre-se aqui</title>
 </head>
 <body>
-<main>
-        <header>
-            <h1>STUDIOFLIX</h1>
-            <a href="index.html"><i class="fa-solid fa-home"></i></a>
-        </header>
+    <header class="header">
+        <nav class="nav">
+            <div class="studioflix">
+                <img src="assets/logo-studioflix.png" alt="Logo StudioFlix">
+                <h1>Studioflix</h1>
+            </div>
 
+            <ul class="nav-list">
+                <li class="link-hover"><a href="index.php" class="home"><i class="fa-solid fa-home"></i> </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
         <div class="central">
-            <form action="">
+            <form action="cadastro.php" method="post"> 
                 <h1>Crie sua conta no studioflix</h1>
 
                 <div class="inputs">
@@ -33,7 +75,7 @@
 
                 <div class="inputs">
                     <label for="user">Nome de usuário</label>
-                    <input type="text" name="user" id="user" placeholder="Digite seu nome de usuário">
+                    <input type="text" name="nome_usuario" id="user" placeholder="Digite seu nome de usuário">
                 </div>
 
                 <div class="inputs">
@@ -46,9 +88,7 @@
                     <input type="password" name="senha" id="senha" placeholder="Digite sua senha">  
                 </div>
 
-                <div class="btn-login">
-                    <a href="#">Cadastrar</a>
-                </div>
+                <button type="submit">Cadastrar</button>
 
                 <h2>Já TEM UMA CONTA? <a href="login.php">Entre aqui</a></h2>
             </form>
@@ -69,5 +109,6 @@
             </div>
         </div>
     </footer>
+
 </body>
 </html>
