@@ -1,0 +1,81 @@
+create database studioflix;
+
+use studioflix;
+
+create table usuarios(
+	id int auto_increment primary key,
+	nome varchar(50) not null,
+	nome_usuario varchar(50) not null,
+	email varchar(50) not null,
+	senha varchar (255) not null
+);
+
+create table filmes(
+	id int auto_increment primary key,
+	nome varchar(150) not null
+	
+);
+
+CREATE TABLE comentarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_filmes INT, 
+    comentario TEXT,
+    data_hora DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_idfilmes FOREIGN KEY (id_filmes) REFERENCES filmes(id)
+);
+
+INSERT INTO filmes (nome) VALUES
+('Vingadores: Ultimato'),
+('O Poderoso Chefão'),
+('Forrest Gump'),
+('Titanic'),
+('Interestelar'),
+('Clube da Luta'),
+('O Senhor dos Anéis: O Retorno do Rei'),
+('Matrix'),
+('A Origem'),
+('Pecadores'),
+('Coringa'),
+('Homem-Aranha: Sem Volta Para Casa'),
+('Gladiador'),
+('Harry Potter e a Pedra Filosofal'),
+('Velozes e Furiosos'),
+('O Rei Leão'),
+('Pantera Negra'),
+('Truque de Mestre'),
+('Creed: Nascido para Lutar'),
+('Rocky: Um Lutador'),
+('Os Incríveis'),
+('Avatar'),
+('Coach Carter - Treino para a Vida'),
+('10 Coisas que Eu Odeio em Você'),
+('Sexta-feira 13'),
+('O Pianista'),
+('Carros'),
+('Clube dos Cinco'),
+('O Lobo de Wall Street'),
+('Adoráveis Mulheres'),
+('O Grande Gatsby'),
+('O Auto da Compadecida'),
+('Parasita'),
+('Homem de Ferro'),
+('Batman: O Cavaleiro das Trevas'),
+('Crepúsculo'),
+('WALL·E'),
+('Ratatouille'),
+('Superman'),
+('O Show de Truman'),
+('Jogos Vorazes'),
+('Need for Speed'),
+('300'),
+('A Culpa é das Estrelas'),
+('A Princesa e o Sapo'),
+('Tropa de Elite'),
+('À Procura da Felicidade'),
+('Cidade de Deus'),
+('Diário de uma Paixão'),
+('O Estranho Mundo de Jack'),
+('Shrek'),
+('Piratas do Caribe'),
+('Toy Story'),
+('De Volta Para o Futuro');
