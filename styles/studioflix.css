@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style-type: none;
 }
 
 html{
@@ -19,20 +20,27 @@ main{
     justify-content: center;
 }
 
-header{
-    background-color: #A91B1B;
-    color: white;
+.header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 40px;
+    background-color: #A91B1B;
+    color: white;
+    padding-inline: 16px;
+    padding-block: 8px;
 }
 
+header .studioflix{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+header img{
+    width: 64px;
+}
 
 header h1{
     font-family: "Bebas Neue", sans-serif;
@@ -41,12 +49,12 @@ header h1{
     font-style: normal;
 }
 
-header .login{
+ul .link-hover .login{
     border: 3px solid white;
     border-radius: 4px;
     margin-top: 1rem;
     text-align: center;
-    width: 13%;
+    max-width: 100px;
     padding: 6px;
     font-family: "Bebas Neue", sans-serif;
     font-size: 26px;
@@ -54,9 +62,48 @@ header .login{
     transition: all 0.8s ease;
 }
 
-header .login:hover{
+ul .link-hover .login:hover{
     background-color: white;
     color: #D51A1A;
+} 
+
+.nav{
+    max-width: 1280px;
+    height: auto;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 4rem;
+    align-items: center;
+}
+
+.logo img{
+    max-width: 80px;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.hamburguer{
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid white;
+    cursor: pointer;
+}
+
+.hamburguer::before, .hamburguer::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
 }
 
 .central{
@@ -126,6 +173,10 @@ section h1{
     color: white;   
 }
 
+h1.title-oscar{
+    margin-top: 1.5rem;
+}
+
 .cards{
     width: 100%;
     display: flex;
@@ -168,6 +219,43 @@ section h1{
     text-align: center;
     color: #e6e6e6;
     width: 300px;
+}
+
+.card-oscar{
+    background-color: #da14142d;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 14px;
+    border: 2px solid white;
+    border-radius: 1.5rem;  
+    color: white;   
+    width: 350px;   
+    transition: transform 0.7s ease;
+}
+
+.card-oscar img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 1.5rem 1.5rem 0 0; 
+}
+
+.card-oscar:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(241, 241, 241, 0.5);
+}
+
+.card-oscar h1{
+    font-size: 28px;
+}
+
+.card-oscar p{
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    color: #e6e6e6;
+    width: 300px;
+    margin-bottom: 1.5rem;
 }
 
 section a.comece-agora{
@@ -248,4 +336,121 @@ footer a.comece-agora:hover{
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px){
+    .hamburguer{
+        display: block;
+        z-index: 99;
+    }
+
+    .nav{
+        padding: 0;
+    }
+
+    .nav-list{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 98;
+        width: 100vw;
+        height: 100vh;
+        background-color: #A91B1B;
+        clip-path: circle(0 at 90% -15%);
+        transition: 1s ease-out;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    .nav-list a{
+        font-size: 24px;
+        opacity: 0;
+    } 
+
+    .nav-active .nav-list{
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    .nav-active .nav-list a{
+        opacity: 1;
+    }
+
+    .nav-active .hamburguer{
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+
+    .nav-active .hamburguer::before{
+        transform: rotate(135deg);
+    }
+
+    .nav-active .hamburguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    header img{
+    width: 52px;
+    }
+
+    header h1{
+        font-size: 36px;
+    }
+
+    .central h1{
+    color: #D51A1A;
+    font-size: 72px;
+    }
+
+    .central h2{
+        color: white;
+        font-size: 32px;
+    }
+
+    .central p{
+        font-size: 16px;
+    }
+
+    a.saiba-mais{
+    font-size: 22px;
+    }
+
+    section h1{
+    font-size: 36px;
+    }
+
+    .cards-row{ 
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    }
+
+    .card h1, h2{
+    font-size: 36px;
+    }
+
+    section a.comece-agora{
+    width: 50%;
+    margin-top: 1.5rem;
+    padding: 10px 12px;
+    font-size: 24px;
+    }   
+
+    .container-footer{
+    padding: 2rem 1.5rem;
+    }
+
+    .footer-info h1{
+    font-size: 38px;
+    }
+
+    .footer-info p{
+    width: 400px;
+    }
 }
